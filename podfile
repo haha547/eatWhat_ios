@@ -6,7 +6,7 @@ target 'eatWhat_ios' do
   use_frameworks!
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
-  #pod 'Firebase/Firestore'
+  pod 'Firebase/Firestore'
   pod 'KeychainSwift'
   pod 'Firebase/Database'
   # Pods for eatWhat_ios

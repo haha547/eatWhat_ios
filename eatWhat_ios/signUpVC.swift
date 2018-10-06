@@ -9,12 +9,26 @@ class signUpVC: UIViewController {
     @IBOutlet weak var userNameEnter: UITextField!
     @IBOutlet weak var passwordEnter: UITextField!
     @IBOutlet weak var rePassword: UITextField!
+    var docRef : DocumentReference!
+
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        docRef = Firestore.firestore().document("user/doc")
+        
+    }
+    
+    
+    
     
     @IBAction func summitToWaitPage(_ sender: UIButton) {
         let email = emailEnter.text
         let username = userNameEnter.text
         let password = passwordEnter.text
         let reEnter = rePassword.text
+        
+        
+        
         if email == "" || username == "" || password == "" || reEnter == "" {
             //Fill all space
             let alertController = UIAlertController(title: "Fill all space", message: "", preferredStyle: UIAlertController.Style.alert)
@@ -37,6 +51,17 @@ class signUpVC: UIViewController {
                             alertController.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.default, handler: nil))
                             self.present(alertController,animated: true,completion: nil)
                             return
+                        }
+                        else{
+                            guard let email = self.emailEnter.text, !email.isEmpty else {return}
+                            guard let password = self.passwordEnter.text, !password.isEmpty else {return}
+                            guard let userName = self.userNameEnter.text, !userName.isEmpty else {return}
+                            let dataToSave : [String:Any] = ["user's email":email, "user's password":password,"user's username":userName ]
+                            self.docRef.setData(dataToSave)
+                            let gg:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                            let verificationPage :waitingForVerificationVC  = gg.instantiateViewController(withIdentifier: "waitingForVerificationVC") as! waitingForVerificationVC
+                            self.present(verificationPage ,animated: true,completion: nil)
+                            
                         }
                     }
                 }

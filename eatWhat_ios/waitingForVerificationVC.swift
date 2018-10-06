@@ -12,5 +12,8 @@ import Firebase
 class waitingForVerificationVC: UIViewController {
 
     
-
+    @IBAction func sentEmail(_ sender: UIButton) {
+        Auth.auth().currentUser
+    }
+    
 }

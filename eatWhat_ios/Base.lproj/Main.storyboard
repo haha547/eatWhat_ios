@@ -92,17 +92,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="去驗證" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wjr-S2-PlP">
-                                <rect key="frame" x="142" y="315.5" width="91" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqp-0d-9jf">
+                                <rect key="frame" x="151.5" y="312.5" width="72" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="sentEmail:" destination="gCo-FR-f0b" eventType="touchUpInside" id="oXW-5U-HXn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
-                            <constraint firstItem="Wjr-S2-PlP" firstAttribute="centerY" secondItem="Dze-3B-l4d" secondAttribute="centerY" id="IKM-2w-I06"/>
-                            <constraint firstItem="Wjr-S2-PlP" firstAttribute="centerX" secondItem="Dze-3B-l4d" secondAttribute="centerX" id="h0u-xj-5M7"/>
+                            <constraint firstItem="fqp-0d-9jf" firstAttribute="centerX" secondItem="Dze-3B-l4d" secondAttribute="centerX" id="2IV-O7-IDc"/>
+                            <constraint firstItem="fqp-0d-9jf" firstAttribute="centerY" secondItem="Dze-3B-l4d" secondAttribute="centerY" id="nnB-X2-EYx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yFU-uH-lNO"/>
                     </view>
@@ -185,15 +187,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uge-0P-NEF">
-                                <rect key="frame" x="50" y="20" width="275" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uge-0P-NEF">
+                                <rect key="frame" x="50" y="50" width="275" height="20.5"/>
                                 <color key="backgroundColor" red="0.3764223171819594" green="0.81305448592960194" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQZ-cA-asn">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQZ-cA-asn">
                                 <rect key="frame" x="50" y="605" width="275" height="42"/>
                                 <color key="backgroundColor" red="1" green="0.70249990389999994" blue="0.88634345169999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -205,7 +206,12 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Uge-0P-NEF" firstAttribute="top" secondItem="6c2-Yc-UTx" secondAttribute="top" constant="30" id="61n-cu-gmN"/>
+                            <constraint firstItem="AQZ-cA-asn" firstAttribute="leading" secondItem="6c2-Yc-UTx" secondAttribute="leading" constant="50" id="Cu3-js-p5r"/>
+                            <constraint firstItem="6c2-Yc-UTx" firstAttribute="trailing" secondItem="Uge-0P-NEF" secondAttribute="trailing" constant="50" id="SM4-lq-G6W"/>
+                            <constraint firstItem="6c2-Yc-UTx" firstAttribute="trailing" secondItem="AQZ-cA-asn" secondAttribute="trailing" constant="50" id="aHo-Jx-3RT"/>
                             <constraint firstItem="6c2-Yc-UTx" firstAttribute="bottom" secondItem="AQZ-cA-asn" secondAttribute="bottom" constant="20" id="gQG-0R-Wbn"/>
+                            <constraint firstItem="Uge-0P-NEF" firstAttribute="leading" secondItem="6c2-Yc-UTx" secondAttribute="leading" constant="50" id="ppf-n0-hng"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6c2-Yc-UTx"/>
                     </view>
