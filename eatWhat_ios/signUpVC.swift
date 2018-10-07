@@ -14,11 +14,13 @@ class signUpVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        docRef = Firestore.firestore().document("user/doc")
-        
     }
     
-    
+    func showMessage( enter : String){
+        let alertController = UIAlertController(title: enter, message: "", preferredStyle: UIAlertController.Style.alert)
+        alertController.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alertController,animated: true,completion: nil)
+    }
     
     
     @IBAction func summitToWaitPage(_ sender: UIButton) {
@@ -31,33 +33,34 @@ class signUpVC: UIViewController {
         
         if email == "" || username == "" || password == "" || reEnter == "" {
             //Fill all space
-            let alertController = UIAlertController(title: "Fill all space", message: "", preferredStyle: UIAlertController.Style.alert)
-            alertController.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alertController,animated: true,completion: nil)
+            self.showMessage(enter: "Fill all space")
         }
         else{
             if password != reEnter{
                 //passwords are not the same
-                let alertController = UIAlertController(title: "passwords are not the same", message: "", preferredStyle: UIAlertController.Style.alert)
-                alertController.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.default, handler: nil))
-                self.present(alertController,animated: true,completion: nil)
+                self.showMessage(enter: "passwords are not the same")
             }
             else{
                 if let email = emailEnter.text,let password = passwordEnter.text{
                     Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
                         if let firebaseError = error{
                             print(firebaseError.localizedDescription)
-                            let alertController = UIAlertController(title: firebaseError.localizedDescription, message: "", preferredStyle: UIAlertController.Style.alert)
-                            alertController.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.default, handler: nil))
-                            self.present(alertController,animated: true,completion: nil)
+                            self.showMessage(enter: firebaseError.localizedDescription)
                             return
                         }
                         else{
-                            guard let email = self.emailEnter.text, !email.isEmpty else {return}
-                            guard let password = self.passwordEnter.text, !password.isEmpty else {return}
-                            guard let userName = self.userNameEnter.text, !userName.isEmpty else {return}
-                            let dataToSave : [String:Any] = ["user's email":email, "user's password":password,"user's username":userName ]
-                            self.docRef.setData(dataToSave)
+                            if Auth.auth().currentUser != nil {//if使用者 == true
+                                let user = Auth.auth().currentUser//user抓現在使用者
+                                if let user = user {
+                                    let uid = user.uid
+                                    let emailGet = user.email
+                                    self.docRef = Firestore.firestore().collection("user").document(email)//document.name = email
+                                    let dataToSave : [String:Any] = ["user's email":emailGet as Any, "user's uid":uid, "username":username as Any, "user's password" : password as Any]
+                                    self.docRef.setData(dataToSave)
+                                }
+                            }
+                            
+                            //轉到等待驗證頁面
                             let gg:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                             let verificationPage :waitingForVerificationVC  = gg.instantiateViewController(withIdentifier: "waitingForVerificationVC") as! waitingForVerificationVC
                             self.present(verificationPage ,animated: true,completion: nil)

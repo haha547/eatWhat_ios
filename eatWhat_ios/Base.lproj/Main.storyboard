@@ -203,14 +203,28 @@
                                     <action selector="loggOut:" destination="7x3-E1-iJ0" eventType="touchUpInside" id="IAR-6L-kcA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wax-Is-LgH">
+                                <rect key="frame" x="50" y="312.5" width="275" height="42"/>
+                                <color key="backgroundColor" red="0.8732653856" green="1" blue="0.8732540607" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="singIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kuS-pp-Wh7"/>
+                                    <action selector="startButton:" destination="7x3-E1-iJ0" eventType="touchUpInside" id="wDP-Ze-fJm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="wax-Is-LgH" firstAttribute="centerX" secondItem="wh5-1T-j5L" secondAttribute="centerX" id="27B-jJ-t5t"/>
+                            <constraint firstItem="wax-Is-LgH" firstAttribute="centerY" secondItem="wh5-1T-j5L" secondAttribute="centerY" id="5M1-8u-9eB"/>
                             <constraint firstItem="Uge-0P-NEF" firstAttribute="top" secondItem="6c2-Yc-UTx" secondAttribute="top" constant="30" id="61n-cu-gmN"/>
+                            <constraint firstItem="6c2-Yc-UTx" firstAttribute="trailing" secondItem="wax-Is-LgH" secondAttribute="trailing" constant="50" id="BGS-ty-xEm"/>
                             <constraint firstItem="AQZ-cA-asn" firstAttribute="leading" secondItem="6c2-Yc-UTx" secondAttribute="leading" constant="50" id="Cu3-js-p5r"/>
                             <constraint firstItem="6c2-Yc-UTx" firstAttribute="trailing" secondItem="Uge-0P-NEF" secondAttribute="trailing" constant="50" id="SM4-lq-G6W"/>
                             <constraint firstItem="6c2-Yc-UTx" firstAttribute="trailing" secondItem="AQZ-cA-asn" secondAttribute="trailing" constant="50" id="aHo-Jx-3RT"/>
                             <constraint firstItem="6c2-Yc-UTx" firstAttribute="bottom" secondItem="AQZ-cA-asn" secondAttribute="bottom" constant="20" id="gQG-0R-Wbn"/>
+                            <constraint firstItem="wax-Is-LgH" firstAttribute="leading" secondItem="6c2-Yc-UTx" secondAttribute="leading" constant="50" id="pa2-yc-VDI"/>
                             <constraint firstItem="Uge-0P-NEF" firstAttribute="leading" secondItem="6c2-Yc-UTx" secondAttribute="leading" constant="50" id="ppf-n0-hng"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6c2-Yc-UTx"/>
