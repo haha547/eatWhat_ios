@@ -9,10 +9,20 @@
 import UIKit
 import Firebase
 
-private let reuseIdentifier = "Cell"
-
 class loggedInVC: UIViewController {
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+    }
+    
+    func showMessage( enter : String){
+        let alertController = UIAlertController(title: enter, message: "", preferredStyle: UIAlertController.Style.alert)
+        alertController.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alertController,animated: true,completion: nil)
+    }
+    
     
     @IBAction func loggOut(_ sender: UIButton) {
         do {

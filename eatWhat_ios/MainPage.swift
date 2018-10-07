@@ -34,7 +34,8 @@ class MainPage: UIViewController {
     
     @IBAction func singIn(_ sender: UIButton) {
         if let email = emailEnter.text, let password = passwordEnter.text {
-            Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+             let userEnter = Auth.auth()
+                userEnter.signIn(withEmail: email, password: password) { (user, error) in
                 if let firebaseError = error{
                     if firebaseError.localizedDescription == "The email address is badly formatted."{
                         self.showMessage(enter: firebaseError.localizedDescription)
@@ -48,9 +49,12 @@ class MainPage: UIViewController {
                     
                 }
                 else{
-                    let gg:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    let loggedInPage : loggedInVC = gg.instantiateViewController(withIdentifier: "loggedInVC") as! loggedInVC
-                    self.present(loggedInPage,animated: true,completion: nil)
+                    if userEnter.currentUser?.isEmailVerified == true{
+                        let gg:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                        let loggedInPage : loggedInVC = gg.instantiateViewController(withIdentifier: "loggedInVC") as! loggedInVC
+                        self.present(loggedInPage,animated: true,completion: nil)
+                    }
+                    self.showMessage(enter: "Email!!!!!")
                 }
         }
     }
@@ -69,25 +73,3 @@ class MainPage: UIViewController {
 //    func present(UIViewController, animated: Bool, completion: (() -> Void)? = nil)
 //    Presents a view controller modally.
 }
-
-
-
-//@IBAction func singIn(_ sender: UIButton) {
-//    if let email = emailEnter.text, let password = passwordEnter.text {
-//        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-//            if error == nil {
-//                self.presentLoggedInPage()
-//            }
-//            else{
-//                let alertController = UIAlertController(title: "Wrong Password", message: "", preferredStyle: UIAlertController.Style.alert)
-//                alertController.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.default, handler: nil))
-//                self.present(alertController,animated: true,completion: nil)
-//            }
-//            if user == nil{
-//                let alertController = UIAlertController(title: "Go sign up", message: "", preferredStyle: UIAlertController.Style.alert)
-//                alertController.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.default, handler: nil))
-//                self.present(alertController,animated: true,completion: nil)
-//            }
-//        }
-//    }
-//}

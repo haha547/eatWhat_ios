@@ -93,9 +93,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqp-0d-9jf">
-                                <rect key="frame" x="151.5" y="312.5" width="72" height="42"/>
+                                <rect key="frame" x="58" y="312.5" width="259" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Sent a Verification Email"/>
                                 <connections>
                                     <action selector="sentEmail:" destination="gCo-FR-f0b" eventType="touchUpInside" id="oXW-5U-HXn"/>
                                 </connections>
@@ -111,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dUB-bL-Gkc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="582" y="700"/>
+            <point key="canvasLocation" x="581.60000000000002" y="699.40029985007504"/>
         </scene>
         <!--Main Page-->
         <scene sceneID="tne-QT-ifu">
@@ -210,6 +210,7 @@
                                 <state key="normal" title="Start"/>
                                 <connections>
                                     <action selector="singIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kuS-pp-Wh7"/>
+                                    <action selector="start:" destination="7x3-E1-iJ0" eventType="touchUpInside" id="P31-rX-jJF"/>
                                     <action selector="startButton:" destination="7x3-E1-iJ0" eventType="touchUpInside" id="wDP-Ze-fJm"/>
                                 </connections>
                             </button>
@@ -233,6 +234,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8lz-5W-aEd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="583" y="27"/>
+        </scene>
+        <!--Setting Page-->
+        <scene sceneID="bSY-iJ-UAh">
+            <objects>
+                <viewController storyboardIdentifier="settingPage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QRe-zz-7uX" customClass="settingPage" customModule="eatWhat_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F1C-ke-gMS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <viewLayoutGuide key="safeArea" id="N7F-ZI-KPa"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fv6-4r-IVI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1353" y="364"/>
         </scene>
     </scenes>
 </document>

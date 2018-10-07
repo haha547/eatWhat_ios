@@ -11,6 +11,11 @@ import Firebase
 
 class waitingForVerificationVC: UIViewController {
 
+    func showMessage( enter : String){
+        let alertController = UIAlertController(title: enter, message: "", preferredStyle: UIAlertController.Style.alert)
+        alertController.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alertController,animated: true,completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,9 +39,8 @@ class waitingForVerificationVC: UIViewController {
                 actionCodeSettings.handleCodeInApp = true
                 actionCodeSettings.setIOSBundleID(Bundle.main.bundleIdentifier!)
                 Auth.auth().currentUser?.sendEmailVerification { (error) in//寄出驗證信
-                    if Auth.auth().currentUser?.isEmailVerified  != nil{
-                        print ("reeeeeeeee")
-                        //go to setting
+                    if error != nil{
+                        print("firebase has some problems")
                     }
                 }
             }
