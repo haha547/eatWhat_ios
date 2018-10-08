@@ -55,6 +55,7 @@ class MainPage: UIViewController {
                         self.present(loggedInPage,animated: true,completion: nil)
                     }
                     self.showMessage(enter: "Email!!!!!")
+                    
                 }
         }
     }
@@ -65,9 +66,6 @@ class MainPage: UIViewController {
         let signUpPage :signUpVC  = gg.instantiateViewController(withIdentifier: "signUpVC") as! signUpVC
         self.present(signUpPage ,animated: true,completion: nil)
     }
-    
-    
-    
     
     
 //    func present(UIViewController, animated: Bool, completion: (() -> Void)? = nil)

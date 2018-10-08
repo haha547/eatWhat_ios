@@ -51,6 +51,17 @@
                                     <action selector="summitToWaitPage:" destination="Pvv-vb-dNp" eventType="touchUpInside" id="HTJ-MV-F9E"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7tH-Tl-dte">
+                                <rect key="frame" x="50" y="595" width="275" height="42"/>
+                                <color key="backgroundColor" red="1" green="0.70249990389999994" blue="0.88634345169999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Go Back"/>
+                                <connections>
+                                    <action selector="goBack:" destination="Pvv-vb-dNp" eventType="touchUpInside" id="FrR-Le-MEY"/>
+                                    <action selector="goBack:" destination="oha-l7-XgK" eventType="touchUpInside" id="Wcf-3H-emv"/>
+                                    <action selector="singUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N5s-a0-x2J"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -58,8 +69,10 @@
                             <constraint firstItem="gPp-Xv-yIL" firstAttribute="trailing" secondItem="5o8-Kl-iZ1" secondAttribute="trailing" constant="50" id="2Uy-ma-g2p"/>
                             <constraint firstItem="mTm-fQ-gdb" firstAttribute="centerX" secondItem="gOF-wi-OXA" secondAttribute="centerX" id="CHm-Ur-aLT"/>
                             <constraint firstItem="Wau-J6-PoT" firstAttribute="leading" secondItem="gPp-Xv-yIL" secondAttribute="leading" constant="50" id="DWE-EY-jI6"/>
+                            <constraint firstItem="gPp-Xv-yIL" firstAttribute="bottom" secondItem="7tH-Tl-dte" secondAttribute="bottom" constant="30" id="JNf-pz-pUy"/>
                             <constraint firstItem="mTm-fQ-gdb" firstAttribute="top" secondItem="Wau-J6-PoT" secondAttribute="bottom" constant="20" id="JlQ-Ie-xZ0"/>
                             <constraint firstItem="Vhr-Ia-t1f" firstAttribute="leading" secondItem="gPp-Xv-yIL" secondAttribute="leading" constant="50" id="UmT-bo-UOV"/>
+                            <constraint firstItem="7tH-Tl-dte" firstAttribute="leading" secondItem="gPp-Xv-yIL" secondAttribute="leading" constant="50" id="W6W-5W-DWY"/>
                             <constraint firstItem="Yh4-4c-rru" firstAttribute="leading" secondItem="gPp-Xv-yIL" secondAttribute="leading" constant="50" id="XwH-ky-4cA"/>
                             <constraint firstItem="Wau-J6-PoT" firstAttribute="top" secondItem="Vhr-Ia-t1f" secondAttribute="bottom" constant="20" id="Yio-Os-o9q"/>
                             <constraint firstItem="gPp-Xv-yIL" firstAttribute="trailing" secondItem="Vhr-Ia-t1f" secondAttribute="trailing" constant="50" id="ZZw-gC-HHQ"/>
@@ -67,6 +80,7 @@
                             <constraint firstItem="gPp-Xv-yIL" firstAttribute="trailing" secondItem="Yh4-4c-rru" secondAttribute="trailing" constant="50" id="bqp-am-N5T"/>
                             <constraint firstItem="mTm-fQ-gdb" firstAttribute="centerY" secondItem="gOF-wi-OXA" secondAttribute="centerY" id="dVz-mz-0vD"/>
                             <constraint firstItem="Vhr-Ia-t1f" firstAttribute="top" secondItem="5o8-Kl-iZ1" secondAttribute="bottom" constant="20" id="gsz-li-WXS"/>
+                            <constraint firstItem="gPp-Xv-yIL" firstAttribute="trailing" secondItem="7tH-Tl-dte" secondAttribute="trailing" constant="50" id="jVb-vF-sFh"/>
                             <constraint firstItem="gPp-Xv-yIL" firstAttribute="trailing" secondItem="Wau-J6-PoT" secondAttribute="trailing" constant="50" id="lca-6Z-qmV"/>
                             <constraint firstItem="5o8-Kl-iZ1" firstAttribute="leading" secondItem="gPp-Xv-yIL" secondAttribute="leading" constant="50" id="mXU-pQ-8ab"/>
                             <constraint firstItem="mTm-fQ-gdb" firstAttribute="leading" secondItem="gPp-Xv-yIL" secondAttribute="leading" constant="50" id="pkk-ju-IqO"/>
@@ -81,13 +95,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0qy-xb-0Vy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="oha-l7-XgK" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-151.19999999999999" y="700.29985007496259"/>
         </scene>
-        <!--Waiting For VerificationVC-->
+        <!--Sent VerificationVC-->
         <scene sceneID="Zm5-3j-XlH">
             <objects>
-                <viewController storyboardIdentifier="waitingForVerificationVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gCo-FR-f0b" customClass="waitingForVerificationVC" customModule="eatWhat_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sentVerificationVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gCo-FR-f0b" customClass="sentVerificationVC" customModule="eatWhat_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dze-3B-l4d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -203,29 +218,24 @@
                                     <action selector="loggOut:" destination="7x3-E1-iJ0" eventType="touchUpInside" id="IAR-6L-kcA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wax-Is-LgH">
-                                <rect key="frame" x="50" y="312.5" width="275" height="42"/>
-                                <color key="backgroundColor" red="0.8732653856" green="1" blue="0.8732540607" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOq-8D-DHf">
+                                <rect key="frame" x="87" y="312.5" width="201" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Start"/>
+                                <state key="normal" title="Go to Setting page"/>
                                 <connections>
-                                    <action selector="singIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kuS-pp-Wh7"/>
-                                    <action selector="start:" destination="7x3-E1-iJ0" eventType="touchUpInside" id="P31-rX-jJF"/>
-                                    <action selector="startButton:" destination="7x3-E1-iJ0" eventType="touchUpInside" id="wDP-Ze-fJm"/>
+                                    <action selector="goToSettingPage:" destination="7x3-E1-iJ0" eventType="touchUpInside" id="5tF-q7-xDg"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="wax-Is-LgH" firstAttribute="centerX" secondItem="wh5-1T-j5L" secondAttribute="centerX" id="27B-jJ-t5t"/>
-                            <constraint firstItem="wax-Is-LgH" firstAttribute="centerY" secondItem="wh5-1T-j5L" secondAttribute="centerY" id="5M1-8u-9eB"/>
                             <constraint firstItem="Uge-0P-NEF" firstAttribute="top" secondItem="6c2-Yc-UTx" secondAttribute="top" constant="30" id="61n-cu-gmN"/>
-                            <constraint firstItem="6c2-Yc-UTx" firstAttribute="trailing" secondItem="wax-Is-LgH" secondAttribute="trailing" constant="50" id="BGS-ty-xEm"/>
+                            <constraint firstItem="NOq-8D-DHf" firstAttribute="centerX" secondItem="wh5-1T-j5L" secondAttribute="centerX" id="9Dt-Ng-tCd"/>
                             <constraint firstItem="AQZ-cA-asn" firstAttribute="leading" secondItem="6c2-Yc-UTx" secondAttribute="leading" constant="50" id="Cu3-js-p5r"/>
                             <constraint firstItem="6c2-Yc-UTx" firstAttribute="trailing" secondItem="Uge-0P-NEF" secondAttribute="trailing" constant="50" id="SM4-lq-G6W"/>
+                            <constraint firstItem="NOq-8D-DHf" firstAttribute="centerY" secondItem="wh5-1T-j5L" secondAttribute="centerY" id="Tcy-MQ-C2m"/>
                             <constraint firstItem="6c2-Yc-UTx" firstAttribute="trailing" secondItem="AQZ-cA-asn" secondAttribute="trailing" constant="50" id="aHo-Jx-3RT"/>
                             <constraint firstItem="6c2-Yc-UTx" firstAttribute="bottom" secondItem="AQZ-cA-asn" secondAttribute="bottom" constant="20" id="gQG-0R-Wbn"/>
-                            <constraint firstItem="wax-Is-LgH" firstAttribute="leading" secondItem="6c2-Yc-UTx" secondAttribute="leading" constant="50" id="pa2-yc-VDI"/>
                             <constraint firstItem="Uge-0P-NEF" firstAttribute="leading" secondItem="6c2-Yc-UTx" secondAttribute="leading" constant="50" id="ppf-n0-hng"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6c2-Yc-UTx"/>

@@ -11,7 +11,7 @@
 		BA2E94512169E77800750302 /* settingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2E94502169E77800750302 /* settingPage.swift */; };
 		BA34E804216896F1009E655B /* loggedInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA34E803216896F1009E655B /* loggedInVC.swift */; };
 		BA34E8082168CE0E009E655B /* signUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA34E8072168CE0E009E655B /* signUpVC.swift */; };
-		BA34E80C2168D717009E655B /* waitingForVerificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA34E80B2168D717009E655B /* waitingForVerificationVC.swift */; };
+		BA34E80C2168D717009E655B /* sentVerificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA34E80B2168D717009E655B /* sentVerificationVC.swift */; };
 		BAF979E321688A9A0035E941 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF979E221688A9A0035E941 /* AppDelegate.swift */; };
 		BAF979E521688A9A0035E941 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF979E421688A9A0035E941 /* MainPage.swift */; };
 		BAF979E821688A9A0035E941 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAF979E621688A9A0035E941 /* Main.storyboard */; };
@@ -26,7 +26,7 @@
 		BA2E94502169E77800750302 /* settingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingPage.swift; sourceTree = "<group>"; };
 		BA34E803216896F1009E655B /* loggedInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loggedInVC.swift; sourceTree = "<group>"; };
 		BA34E8072168CE0E009E655B /* signUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpVC.swift; sourceTree = "<group>"; };
-		BA34E80B2168D717009E655B /* waitingForVerificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = waitingForVerificationVC.swift; sourceTree = "<group>"; };
+		BA34E80B2168D717009E655B /* sentVerificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sentVerificationVC.swift; sourceTree = "<group>"; };
 		BAF979DF21688A9A0035E941 /* eatWhat_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eatWhat_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAF979E221688A9A0035E941 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAF979E421688A9A0035E941 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 			children = (
 				BAF979E221688A9A0035E941 /* AppDelegate.swift */,
 				BAF979E421688A9A0035E941 /* MainPage.swift */,
-				BA34E80B2168D717009E655B /* waitingForVerificationVC.swift */,
+				BA34E80B2168D717009E655B /* sentVerificationVC.swift */,
 				BA34E8072168CE0E009E655B /* signUpVC.swift */,
 				BA34E803216896F1009E655B /* loggedInVC.swift */,
 				BAF979E621688A9A0035E941 /* Main.storyboard */,
@@ -246,7 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA34E80C2168D717009E655B /* waitingForVerificationVC.swift in Sources */,
+				BA34E80C2168D717009E655B /* sentVerificationVC.swift in Sources */,
 				BAF979E521688A9A0035E941 /* MainPage.swift in Sources */,
 				BAF979E321688A9A0035E941 /* AppDelegate.swift in Sources */,
 				BA2E94512169E77800750302 /* settingPage.swift in Sources */,

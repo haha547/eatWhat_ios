@@ -23,6 +23,12 @@ class loggedInVC: UIViewController {
         self.present(alertController,animated: true,completion: nil)
     }
     
+    @IBAction func goToSettingPage(_ sender: UIButton) {
+        let gg:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let settingPage :settingPage  = gg.instantiateViewController(withIdentifier: "settingPage") as! settingPage
+        self.present(settingPage ,animated: true,completion: nil)
+    }
+    
     
     @IBAction func loggOut(_ sender: UIButton) {
         do {

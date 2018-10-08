@@ -22,6 +22,10 @@ class signUpVC: UIViewController {
         self.present(alertController,animated: true,completion: nil)
     }
     
+    @IBAction func goBack(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     
     @IBAction func summitToWaitPage(_ sender: UIButton) {
         let email = emailEnter.text
@@ -62,8 +66,8 @@ class signUpVC: UIViewController {
                             
                             //轉到等待驗證頁面
                             let gg:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                            let verificationPage :waitingForVerificationVC  = gg.instantiateViewController(withIdentifier: "waitingForVerificationVC") as! waitingForVerificationVC
-                            self.present(verificationPage ,animated: true,completion: nil)
+                            let sentVerificationVC :sentVerificationVC  = gg.instantiateViewController(withIdentifier: "sentVerificationVC") as! sentVerificationVC
+                            self.present(sentVerificationVC ,animated: true,completion: nil)
                             
                         }
                     }

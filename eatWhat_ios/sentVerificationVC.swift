@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class waitingForVerificationVC: UIViewController {
+class sentVerificationVC: UIViewController {
 
     func showMessage( enter : String){
         let alertController = UIAlertController(title: enter, message: "", preferredStyle: UIAlertController.Style.alert)
@@ -22,6 +22,9 @@ class waitingForVerificationVC: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
     }
+    
+    
+    
     
     
     @IBAction func sentEmail(_ sender: UIButton) {
@@ -39,9 +42,13 @@ class waitingForVerificationVC: UIViewController {
                 actionCodeSettings.handleCodeInApp = true
                 actionCodeSettings.setIOSBundleID(Bundle.main.bundleIdentifier!)
                 Auth.auth().currentUser?.sendEmailVerification { (error) in//寄出驗證信
+                    let gg:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let MainPage :MainPage  = gg.instantiateViewController(withIdentifier: "MainPage") as! MainPage
+                    self.present(MainPage ,animated: true,completion: nil)
                     if error != nil{
                         print("firebase has some problems")
                     }
+                    
                 }
             }
         }
