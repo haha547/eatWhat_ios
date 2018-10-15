@@ -24,7 +24,7 @@ class loggedInVC: UIViewController {
     }
     
     @IBAction func goToSettingPage(_ sender: UIButton) {
-        let gg:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let gg:UIStoryboard = UIStoryboard(name: "setting", bundle: nil)
         let settingPage :settingPage  = gg.instantiateViewController(withIdentifier: "settingPage") as! settingPage
         self.present(settingPage ,animated: true,completion: nil)
     }

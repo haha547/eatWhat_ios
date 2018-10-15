@@ -9,9 +9,10 @@ class signUpVC: UIViewController {
     @IBOutlet weak var userNameEnter: UITextField!
     @IBOutlet weak var passwordEnter: UITextField!
     @IBOutlet weak var rePassword: UITextField!
+    @IBOutlet weak var userBirthday: UITextField!
+    
     var docRef : DocumentReference!
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -32,8 +33,6 @@ class signUpVC: UIViewController {
         let username = userNameEnter.text
         let password = passwordEnter.text
         let reEnter = rePassword.text
-        
-        
         
         if email == "" || username == "" || password == "" || reEnter == "" {
             //Fill all space
@@ -63,12 +62,10 @@ class signUpVC: UIViewController {
                                     self.docRef.setData(dataToSave)
                                 }
                             }
-                            
-                            //轉到等待驗證頁面
+                            //轉到sentVerificationVC
                             let gg:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                             let sentVerificationVC :sentVerificationVC  = gg.instantiateViewController(withIdentifier: "sentVerificationVC") as! sentVerificationVC
                             self.present(sentVerificationVC ,animated: true,completion: nil)
-                            
                         }
                     }
                 }

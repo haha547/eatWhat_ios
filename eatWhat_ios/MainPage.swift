@@ -1,13 +1,14 @@
 //
 //  ViewController.swift
 //  eatWhat_ios
-//
+//  登入（檢查是否有沒有驗證）或是選擇註冊
 //  Created by 徐浩哲 on 2018/10/6.
 //  Copyright © 2018 徐浩哲. All rights reserved.
 //
 
 import UIKit
 import Firebase
+import GoogleSignIn
 
 class MainPage: UIViewController {
 

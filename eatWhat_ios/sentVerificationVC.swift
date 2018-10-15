@@ -1,7 +1,7 @@
 //
 //  waitingForVerificationVC.swift
 //  eatWhat_ios
-//
+//  新使用者寄驗證信
 //  Created by 徐浩哲 on 2018/10/6.
 //  Copyright © 2018 徐浩哲. All rights reserved.
 //
@@ -22,9 +22,6 @@ class sentVerificationVC: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
     }
-    
-    
-    
     
     
     @IBAction func sentEmail(_ sender: UIButton) {
@@ -48,10 +45,8 @@ class sentVerificationVC: UIViewController {
                     if error != nil{
                         print("firebase has some problems")
                     }
-                    
                 }
             }
         }
     }
-    
 }

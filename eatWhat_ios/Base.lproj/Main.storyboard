@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -41,16 +41,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yh4-4c-rru">
-                                <rect key="frame" x="50" y="388.5" width="275" height="42"/>
-                                <color key="backgroundColor" red="1" green="0.70249990389999994" blue="0.88634345169999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="SUMMIT"/>
-                                <connections>
-                                    <action selector="singUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NLs-XZ-gmL"/>
-                                    <action selector="summitToWaitPage:" destination="Pvv-vb-dNp" eventType="touchUpInside" id="HTJ-MV-F9E"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7tH-Tl-dte">
                                 <rect key="frame" x="50" y="595" width="275" height="42"/>
                                 <color key="backgroundColor" red="1" green="0.70249990389999994" blue="0.88634345169999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -62,25 +52,44 @@
                                     <action selector="singUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N5s-a0-x2J"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Birthday" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Izj-DV-a6t">
+                                <rect key="frame" x="50" y="368.5" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yh4-4c-rru">
+                                <rect key="frame" x="50" y="438.5" width="275" height="42"/>
+                                <color key="backgroundColor" red="1" green="0.70249990389999994" blue="0.88634345169999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="SUMMIT"/>
+                                <connections>
+                                    <action selector="singUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NLs-XZ-gmL"/>
+                                    <action selector="summitToWaitPage:" destination="Pvv-vb-dNp" eventType="touchUpInside" id="HTJ-MV-F9E"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="gPp-Xv-yIL" firstAttribute="trailing" secondItem="mTm-fQ-gdb" secondAttribute="trailing" constant="50" id="2Hx-lz-tRT"/>
                             <constraint firstItem="gPp-Xv-yIL" firstAttribute="trailing" secondItem="5o8-Kl-iZ1" secondAttribute="trailing" constant="50" id="2Uy-ma-g2p"/>
                             <constraint firstItem="mTm-fQ-gdb" firstAttribute="centerX" secondItem="gOF-wi-OXA" secondAttribute="centerX" id="CHm-Ur-aLT"/>
+                            <constraint firstItem="gPp-Xv-yIL" firstAttribute="trailing" secondItem="Izj-DV-a6t" secondAttribute="trailing" constant="50" id="CWW-gY-Dbe"/>
                             <constraint firstItem="Wau-J6-PoT" firstAttribute="leading" secondItem="gPp-Xv-yIL" secondAttribute="leading" constant="50" id="DWE-EY-jI6"/>
                             <constraint firstItem="gPp-Xv-yIL" firstAttribute="bottom" secondItem="7tH-Tl-dte" secondAttribute="bottom" constant="30" id="JNf-pz-pUy"/>
                             <constraint firstItem="mTm-fQ-gdb" firstAttribute="top" secondItem="Wau-J6-PoT" secondAttribute="bottom" constant="20" id="JlQ-Ie-xZ0"/>
                             <constraint firstItem="Vhr-Ia-t1f" firstAttribute="leading" secondItem="gPp-Xv-yIL" secondAttribute="leading" constant="50" id="UmT-bo-UOV"/>
                             <constraint firstItem="7tH-Tl-dte" firstAttribute="leading" secondItem="gPp-Xv-yIL" secondAttribute="leading" constant="50" id="W6W-5W-DWY"/>
                             <constraint firstItem="Yh4-4c-rru" firstAttribute="leading" secondItem="gPp-Xv-yIL" secondAttribute="leading" constant="50" id="XwH-ky-4cA"/>
+                            <constraint firstItem="Yh4-4c-rru" firstAttribute="top" secondItem="Izj-DV-a6t" secondAttribute="bottom" constant="40" id="YLK-sn-0HY"/>
                             <constraint firstItem="Wau-J6-PoT" firstAttribute="top" secondItem="Vhr-Ia-t1f" secondAttribute="bottom" constant="20" id="Yio-Os-o9q"/>
                             <constraint firstItem="gPp-Xv-yIL" firstAttribute="trailing" secondItem="Vhr-Ia-t1f" secondAttribute="trailing" constant="50" id="ZZw-gC-HHQ"/>
-                            <constraint firstItem="Yh4-4c-rru" firstAttribute="top" secondItem="mTm-fQ-gdb" secondAttribute="bottom" constant="40" id="bUu-VR-O7a"/>
                             <constraint firstItem="gPp-Xv-yIL" firstAttribute="trailing" secondItem="Yh4-4c-rru" secondAttribute="trailing" constant="50" id="bqp-am-N5T"/>
                             <constraint firstItem="mTm-fQ-gdb" firstAttribute="centerY" secondItem="gOF-wi-OXA" secondAttribute="centerY" id="dVz-mz-0vD"/>
+                            <constraint firstItem="Izj-DV-a6t" firstAttribute="leading" secondItem="gPp-Xv-yIL" secondAttribute="leading" constant="50" id="e1B-Mb-QSY"/>
                             <constraint firstItem="Vhr-Ia-t1f" firstAttribute="top" secondItem="5o8-Kl-iZ1" secondAttribute="bottom" constant="20" id="gsz-li-WXS"/>
                             <constraint firstItem="gPp-Xv-yIL" firstAttribute="trailing" secondItem="7tH-Tl-dte" secondAttribute="trailing" constant="50" id="jVb-vF-sFh"/>
+                            <constraint firstItem="Izj-DV-a6t" firstAttribute="top" secondItem="mTm-fQ-gdb" secondAttribute="bottom" constant="20" id="juX-84-eEC"/>
                             <constraint firstItem="gPp-Xv-yIL" firstAttribute="trailing" secondItem="Wau-J6-PoT" secondAttribute="trailing" constant="50" id="lca-6Z-qmV"/>
                             <constraint firstItem="5o8-Kl-iZ1" firstAttribute="leading" secondItem="gPp-Xv-yIL" secondAttribute="leading" constant="50" id="mXU-pQ-8ab"/>
                             <constraint firstItem="mTm-fQ-gdb" firstAttribute="leading" secondItem="gPp-Xv-yIL" secondAttribute="leading" constant="50" id="pkk-ju-IqO"/>
@@ -91,6 +100,7 @@
                         <outlet property="emailEnter" destination="5o8-Kl-iZ1" id="9ts-2e-zAC"/>
                         <outlet property="passwordEnter" destination="Wau-J6-PoT" id="W89-bA-qax"/>
                         <outlet property="rePassword" destination="mTm-fQ-gdb" id="6Gd-W7-fxh"/>
+                        <outlet property="userBirthday" destination="Izj-DV-a6t" id="ubc-gV-bEd"/>
                         <outlet property="userNameEnter" destination="Vhr-Ia-t1f" id="hXN-1y-cWw"/>
                     </connections>
                 </viewController>
@@ -244,21 +254,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8lz-5W-aEd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="583" y="27"/>
-        </scene>
-        <!--Setting Page-->
-        <scene sceneID="bSY-iJ-UAh">
-            <objects>
-                <viewController storyboardIdentifier="settingPage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QRe-zz-7uX" customClass="settingPage" customModule="eatWhat_ios" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="F1C-ke-gMS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <viewLayoutGuide key="safeArea" id="N7F-ZI-KPa"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fv6-4r-IVI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1353" y="364"/>
         </scene>
     </scenes>
 </document>
