@@ -19,15 +19,10 @@ class loggedInVC: UIViewController {
     
     func showMessage( enter : String){
         let alertController = UIAlertController(title: enter, message: "", preferredStyle: UIAlertController.Style.alert)
-        alertController.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.default, handler: nil))
+        alertController.addAction(UIAlertAction(title: "我瞭解了", style: UIAlertAction.Style.default, handler: nil))
         self.present(alertController,animated: true,completion: nil)
     }
     
-    @IBAction func goToSettingPage(_ sender: UIButton) {
-        let gg:UIStoryboard = UIStoryboard(name: "setting", bundle: nil)
-        let settingPage :settingPage  = gg.instantiateViewController(withIdentifier: "settingPage") as! settingPage
-        self.present(settingPage ,animated: true,completion: nil)
-    }
     
     
     @IBAction func loggOut(_ sender: UIButton) {

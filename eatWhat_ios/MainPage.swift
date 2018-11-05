@@ -8,7 +8,7 @@
 
 import UIKit
 import Firebase
-import GoogleSignIn
+
 
 class MainPage: UIViewController {
 
@@ -29,7 +29,7 @@ class MainPage: UIViewController {
     
     func showMessage( enter : String){
         let alertController = UIAlertController(title: enter, message: "", preferredStyle: UIAlertController.Style.alert)
-        alertController.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.default, handler: nil))
+        alertController.addAction(UIAlertAction(title: "我瞭解了", style: UIAlertAction.Style.default, handler: nil))
         self.present(alertController,animated: true,completion: nil)
     }
     
@@ -39,13 +39,13 @@ class MainPage: UIViewController {
                 userEnter.signIn(withEmail: email, password: password) { (user, error) in
                 if let firebaseError = error{
                     if firebaseError.localizedDescription == "The email address is badly formatted."{
-                        self.showMessage(enter: firebaseError.localizedDescription)
+                        self.showMessage(enter: "不是正確電子信箱的格式")
                     }
                     if firebaseError.localizedDescription == "There is no user record corresponding to this identifier. The user may have been deleted."{
-                        self.showMessage(enter : "Please sign up")
+                        self.showMessage(enter : "請註冊")
                     }
                     if firebaseError.localizedDescription == "The password is invalid or the user does not have a password."{
-                        self.showMessage(enter: "The password is invalid")
+                        self.showMessage(enter: "密碼錯誤")
                     }
                     
                 }
@@ -55,7 +55,7 @@ class MainPage: UIViewController {
                         let loggedInPage : loggedInVC = gg.instantiateViewController(withIdentifier: "loggedInVC") as! loggedInVC
                         self.present(loggedInPage,animated: true,completion: nil)
                     }
-                    self.showMessage(enter: "Email!!!!!")
+                    self.showMessage(enter: "你的驗證信尚未驗證完成")
                     
                 }
         }

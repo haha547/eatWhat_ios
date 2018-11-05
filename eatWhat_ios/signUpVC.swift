@@ -19,7 +19,7 @@ class signUpVC: UIViewController {
     
     func showMessage( enter : String){
         let alertController = UIAlertController(title: enter, message: "", preferredStyle: UIAlertController.Style.alert)
-        alertController.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.default, handler: nil))
+        alertController.addAction(UIAlertAction(title: "我瞭解了", style: UIAlertAction.Style.default, handler: nil))
         self.present(alertController,animated: true,completion: nil)
     }
     
@@ -36,12 +36,12 @@ class signUpVC: UIViewController {
         
         if email == "" || username == "" || password == "" || reEnter == "" {
             //Fill all space
-            self.showMessage(enter: "Fill all space")
+            self.showMessage(enter: "請填滿所有格子")
         }
         else{
             if password != reEnter{
                 //passwords are not the same
-                self.showMessage(enter: "passwords are not the same")
+                self.showMessage(enter: "密碼不一樣")
             }
             else{
                 if let email = emailEnter.text,let password = passwordEnter.text{

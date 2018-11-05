@@ -13,7 +13,7 @@ class sentVerificationVC: UIViewController {
 
     func showMessage( enter : String){
         let alertController = UIAlertController(title: enter, message: "", preferredStyle: UIAlertController.Style.alert)
-        alertController.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.default, handler: nil))
+        alertController.addAction(UIAlertAction(title: "我瞭解了", style: UIAlertAction.Style.default, handler: nil))
         self.present(alertController,animated: true,completion: nil)
     }
     

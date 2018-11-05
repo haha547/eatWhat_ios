@@ -8,11 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6F9BC0FFAC78DAF76761AF02 /* Pods_eatWhat_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F693DCF242557CC3E70EFE17 /* Pods_eatWhat_ios.framework */; };
-		BA2E94512169E77800750302 /* settingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2E94502169E77800750302 /* settingPage.swift */; };
 		BA34E804216896F1009E655B /* loggedInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA34E803216896F1009E655B /* loggedInVC.swift */; };
 		BA34E8082168CE0E009E655B /* signUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA34E8072168CE0E009E655B /* signUpVC.swift */; };
 		BA34E80C2168D717009E655B /* sentVerificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA34E80B2168D717009E655B /* sentVerificationVC.swift */; };
-		BAA4CA89216B440B0061400C /* setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA4CA88216B440B0061400C /* setting.storyboard */; };
 		BAF979E321688A9A0035E941 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF979E221688A9A0035E941 /* AppDelegate.swift */; };
 		BAF979E521688A9A0035E941 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF979E421688A9A0035E941 /* MainPage.swift */; };
 		BAF979E821688A9A0035E941 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAF979E621688A9A0035E941 /* Main.storyboard */; };
@@ -24,11 +22,9 @@
 /* Begin PBXFileReference section */
 		94A3DB507DA450B52FF13FA4 /* Pods-eatWhat_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eatWhat_ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-eatWhat_ios/Pods-eatWhat_ios.release.xcconfig"; sourceTree = "<group>"; };
 		A3239CED756871A03F558B6D /* Pods-eatWhat_ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eatWhat_ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eatWhat_ios/Pods-eatWhat_ios.debug.xcconfig"; sourceTree = "<group>"; };
-		BA2E94502169E77800750302 /* settingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingPage.swift; sourceTree = "<group>"; };
 		BA34E803216896F1009E655B /* loggedInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loggedInVC.swift; sourceTree = "<group>"; };
 		BA34E8072168CE0E009E655B /* signUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpVC.swift; sourceTree = "<group>"; };
 		BA34E80B2168D717009E655B /* sentVerificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sentVerificationVC.swift; sourceTree = "<group>"; };
-		BAA4CA88216B440B0061400C /* setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = setting.storyboard; sourceTree = "<group>"; };
 		BAF979DF21688A9A0035E941 /* eatWhat_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eatWhat_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAF979E221688A9A0035E941 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAF979E421688A9A0035E941 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
@@ -90,14 +86,12 @@
 		BAF979E121688A9A0035E941 /* eatWhat_ios */ = {
 			isa = PBXGroup;
 			children = (
+				BAF979E621688A9A0035E941 /* Main.storyboard */,
 				BAF979E221688A9A0035E941 /* AppDelegate.swift */,
 				BAF979E421688A9A0035E941 /* MainPage.swift */,
 				BA34E80B2168D717009E655B /* sentVerificationVC.swift */,
 				BA34E8072168CE0E009E655B /* signUpVC.swift */,
 				BA34E803216896F1009E655B /* loggedInVC.swift */,
-				BAF979E621688A9A0035E941 /* Main.storyboard */,
-				BA2E94502169E77800750302 /* settingPage.swift */,
-				BAA4CA88216B440B0061400C /* setting.storyboard */,
 				BAF979E921688A9B0035E941 /* Assets.xcassets */,
 				BAF979EB21688A9B0035E941 /* LaunchScreen.storyboard */,
 				BAF979F421688B0E0035E941 /* GoogleService-Info.plist */,
@@ -118,7 +112,6 @@
 				BAF979DC21688A9A0035E941 /* Frameworks */,
 				BAF979DD21688A9A0035E941 /* Resources */,
 				A0474C1B97D08E904BA8F097 /* [CP] Embed Pods Frameworks */,
-				3729EEA9FE571F0EF0514163 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -169,7 +162,6 @@
 			files = (
 				BAF979ED21688A9B0035E941 /* LaunchScreen.storyboard in Resources */,
 				BAF979F521688B0E0035E941 /* GoogleService-Info.plist in Resources */,
-				BAA4CA89216B440B0061400C /* setting.storyboard in Resources */,
 				BAF979EA21688A9B0035E941 /* Assets.xcassets in Resources */,
 				BAF979E821688A9A0035E941 /* Main.storyboard in Resources */,
 			);
@@ -200,28 +192,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3729EEA9FE571F0EF0514163 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-eatWhat_ios/Pods-eatWhat_ios-resources.sh",
-				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eatWhat_ios/Pods-eatWhat_ios-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A0474C1B97D08E904BA8F097 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -232,11 +202,8 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-eatWhat_ios/Pods-eatWhat_ios-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
@@ -251,11 +218,8 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
@@ -280,7 +244,6 @@
 				BA34E80C2168D717009E655B /* sentVerificationVC.swift in Sources */,
 				BAF979E521688A9A0035E941 /* MainPage.swift in Sources */,
 				BAF979E321688A9A0035E941 /* AppDelegate.swift in Sources */,
-				BA2E94512169E77800750302 /* settingPage.swift in Sources */,
 				BA34E8082168CE0E009E655B /* signUpVC.swift in Sources */,
 				BA34E804216896F1009E655B /* loggedInVC.swift in Sources */,
 			);

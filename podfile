@@ -7,10 +7,10 @@ target 'eatWhat_ios' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
-  pod 'KeychainSwift'
+  #pod 'KeychainSwift'
   pod 'Firebase/Database'
-  pod 'GoogleSignIn'
-  # Pods for eatWhat_ios
+  #pod 'GoogleSignIn'
+  #Pods for eatWhat_ios
 
 end
 
