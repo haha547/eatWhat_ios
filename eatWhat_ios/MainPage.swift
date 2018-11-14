@@ -68,7 +68,4 @@ class MainPage: UIViewController {
         self.present(signUpPage ,animated: true,completion: nil)
     }
     
-    
-//    func present(UIViewController, animated: Bool, completion: (() -> Void)? = nil)
-//    Presents a view controller modally.
 }

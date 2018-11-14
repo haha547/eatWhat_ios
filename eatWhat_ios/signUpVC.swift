@@ -4,6 +4,7 @@ import Firebase
 
 
 class signUpVC: UIViewController {
+    var docRef : DocumentReference!
     
     @IBOutlet weak var emailEnter: UITextField!
     @IBOutlet weak var userNameEnter: UITextField!
@@ -11,10 +12,30 @@ class signUpVC: UIViewController {
     @IBOutlet weak var rePassword: UITextField!
     @IBOutlet weak var userBirthday: UITextField!
     
-    var docRef : DocumentReference!
-
+    private var datePicker: UIDatePicker?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        datePicker = UIDatePicker()
+        datePicker?.datePickerMode = .date
+        datePicker?.addTarget(self, action: #selector(dateChange(datePicker:)), for: .valueChanged)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped(gestureRecognizer:)))
+        
+        view.addGestureRecognizer(tapGesture)
+        
+        userBirthday.inputView = datePicker
+    }
+    
+    @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer){
+        view.endEditing(true)
+    }
+    
+    @objc func dateChange(datePicker: UIDatePicker){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy/MM/dd"
+        userBirthday.text = dateFormatter.string(from: datePicker.date)
+        view.endEditing(true)
     }
     
     func showMessage( enter : String){
@@ -27,12 +48,12 @@ class signUpVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    
     @IBAction func summitToWaitPage(_ sender: UIButton) {
         let email = emailEnter.text
         let username = userNameEnter.text
         let password = passwordEnter.text
         let reEnter = rePassword.text
+        let userBirthday = self.userBirthday.text
         
         if email == "" || username == "" || password == "" || reEnter == "" {
             //Fill all space
@@ -58,7 +79,7 @@ class signUpVC: UIViewController {
                                     let uid = user.uid
                                     let emailGet = user.email
                                     self.docRef = Firestore.firestore().collection("user").document(email)//document.name = email
-                                    let dataToSave : [String:Any] = ["user's email":emailGet as Any, "user's uid":uid, "username":username as Any, "user's password" : password as Any]
+                                    let dataToSave : [String:Any] = ["user's email":emailGet as Any, "user's uid":uid, "username":username as Any, "user's password" : password as Any, "user's birthday" : userBirthday as Any]
                                     self.docRef.setData(dataToSave)
                                 }
                             }

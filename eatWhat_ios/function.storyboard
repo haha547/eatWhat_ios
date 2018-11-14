@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main MenuVC-->
+        <scene sceneID="6XN-R1-qWN">
+            <objects>
+                <viewController storyboardIdentifier="mainMenuVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GLQ-6C-gZB" customClass="mainMenuVC" customModule="eatWhat_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pee-e7-Pds">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zG-0K-0BC">
+                                <rect key="frame" x="81" y="309.5" width="213" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="決定我的命運吧"/>
+                                <connections>
+                                    <action selector="rolling:" destination="GLQ-6C-gZB" eventType="touchUpInside" id="s8S-sY-GuM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6zG-0K-0BC" firstAttribute="centerY" secondItem="pee-e7-Pds" secondAttribute="centerY" id="OM1-hh-LC7"/>
+                            <constraint firstItem="6zG-0K-0BC" firstAttribute="centerX" secondItem="pee-e7-Pds" secondAttribute="centerX" id="WBP-8V-O3w"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xhf-hh-B6Y"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rqy-YA-bOO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-577" y="-298"/>
+        </scene>
+    </scenes>
+</document>
